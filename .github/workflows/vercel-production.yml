@@ -13,14 +13,16 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v2
 
-            - name: Install yarn
-              run: npm install -g yarn
+            - name: Install pnpm
+              run: npm install -g pnpm
 
             - name: Install dependencies
-              run: yarn install
+              run: |
+                pnpm install
+                pnpm install --global prettier eslint typescript
 
             - name: Check lint and format
-              run: yarn test-all
+              run: pnpm test-all
 
             - name: Deploy to Vercel
               uses: amondnet/vercel-action@v20
