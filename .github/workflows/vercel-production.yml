@@ -20,7 +20,7 @@ jobs:
               run: pnpm install
 
             - name: Check lint and format
-              run: pnpm run start
+              run: pnpm test-all
 
             - name: Deploy to Vercel
               uses: amondnet/vercel-action@v20
