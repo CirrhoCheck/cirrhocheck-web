@@ -3,7 +3,6 @@ name: CirrhocheckPipeline
 on:
   push:
     branches: [main]
-    
 
 jobs:
   lintTest:
@@ -20,7 +19,7 @@ jobs:
         run: |
           echo "Running Linting tests.."
           npm run lint
-        env: 
+        env:
           CI: true
 
   securityCheck:
@@ -47,5 +46,3 @@ jobs:
         run: |
           echo "Deployment in Progress.."
           sleep 5s;
-
-
