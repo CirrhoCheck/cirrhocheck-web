@@ -21,7 +21,5 @@
       "@modules": ["src/components/modules"],
       "@utils": ["src/components/utils"]
     }
-  },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  }
 }
